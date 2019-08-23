@@ -3,7 +3,7 @@ FROM alpine:latest
 ENV VOL_SSH=/init/ssh
 
 RUN mkdir -p ${VOL_SSH} && \
-    apk --no-cache add openssh-server && \
+    apk --no-cache add openssh-server openssh-sftp-server && \
     adduser sftp -D && \
     chown root:root /home/sftp && \
     sed -i -e "s/sftp:!:/sftp:\*:/" /etc/shadow && \
