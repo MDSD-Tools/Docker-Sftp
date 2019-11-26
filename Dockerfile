@@ -1,11 +1,10 @@
-FROM debian:stable-slim
+FROM alpine:latest
 
 ENV VOL_SSH=/init/ssh
 
 RUN mkdir -p ${VOL_SSH} && \
-    apt-get update && \
-    apt-get install -y openssh-server openssh-sftp-server && \
-    adduser --disabled-password sftp && \
+    apk --no-cache add openssh-server openssh-sftp-server && \
+    adduser sftp -D && \
     chown root:root /home/sftp && \
     sed -i -e "s/sftp:!:/sftp:\*:/" /etc/shadow && \
     mkdir -p /home/sftp/.ssh && \
