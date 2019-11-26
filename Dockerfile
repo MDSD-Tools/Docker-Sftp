@@ -5,7 +5,7 @@ ENV VOL_SSH=/init/ssh
 RUN mkdir -p ${VOL_SSH} && \
     apt-get update && \
     apt-get install -y openssh-server openssh-sftp-server && \
-    adduser sftp -D && \
+    adduser --disabled-password sftp && \
     chown root:root /home/sftp && \
     sed -i -e "s/sftp:!:/sftp:\*:/" /etc/shadow && \
     mkdir -p /home/sftp/.ssh && \
