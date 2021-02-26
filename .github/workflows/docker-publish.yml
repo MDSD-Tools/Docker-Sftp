@@ -31,7 +31,7 @@ jobs:
   push:
     needs: test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' || startsWith(github.ref, "refs/tags/")
+    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/')
 
     steps:
       - uses: actions/checkout@v2
