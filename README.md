@@ -1,7 +1,6 @@
 # Docker-Sftp
 
-[![](https://img.shields.io/github/workflow/status/mdsd-tools/Docker-Sftp/Docker)](https://github.com/mdsd-tools/Docker-Sftp/actions/workflows/docker-publish.yml)
-[![](https://img.shields.io/github/tag/mdsd-tools/Docker-Sftp.svg)](https://github.com/orgs/mdsd-tools/packages/container/package/sftp-server)
+[![](https://github.com/MDSD-Tools/Docker-Sftp/actions/workflows/docker-publish.yml/badge.svg?branch=main)](https://github.com/MDSD-Tools/Docker-Sftp/actions?query=branch%3Amain+)
 [![](https://img.shields.io/github/issues/mdsd-tools/Docker-Sftp.svg)](https://github.com/mdsd-tools/Docker-Sftp/issues)
 [![](https://img.shields.io/github/license/mdsd-tools/Docker-Sftp.svg)](https://github.com/mdsd-tools/Docker-Sftp/blob/master/LICENSE)
 
@@ -11,4 +10,4 @@ There is a volume for the SSH keys of the server. In order to allow logins, you 
 
 By default, the user cannot write to any directory. You have to mount a writable volume that can be used for sftp.
 
-Docker images are available on the [Github Docker Registry](https://github.com/orgs/mdsd-tools/packages/container/package/sftp-server).
+Docker images are available on the [MDSD.tools Registry](https://docker.mdsd.tools/?#!taglist/sftp-server).
